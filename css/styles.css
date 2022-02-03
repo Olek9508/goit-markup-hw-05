@@ -830,6 +830,11 @@ body {
   flex-wrap: wrap;
 }
 
+.card-link {
+  display: block;
+  text-decoration: none;
+}
+
 .example-image {
   position: relative;
   overflow: hidden;
@@ -843,7 +848,7 @@ body {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition-property: transform;
+  transition-property: transform, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -861,9 +866,11 @@ body {
   color: #ffffff;
 }
 
-.example-item:hover,
-.example-item:focus .example-animation {
+.card-link:hover .example-animation,
+.card-link:focus .example-animation {
   transform: translateY(0);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .example-item {
@@ -875,7 +882,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.example-item:hover {
+.example-item:hover,
+.example-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
