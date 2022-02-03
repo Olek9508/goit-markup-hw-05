@@ -861,10 +861,7 @@ body {
   color: #ffffff;
 }
 
-.example-item:hover .example-animation {
-  transform: translateY(0);
-}
-
+.example-item:hover,
 .example-item:focus .example-animation {
   transform: translateY(0);
 }
